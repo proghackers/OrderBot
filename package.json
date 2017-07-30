@@ -1,0 +1,14 @@
+{
+    "name": "orderbot",
+    "version": "0.0.1",
+    "description": "FB Messenger Bot",
+    "main": "index.js",
+    "author": "rguleria",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "config": "^1.26.1",
+        "express": "^4.15.3",
+        "mongoose": "^4.11.4"
+    }
+}
