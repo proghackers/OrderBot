@@ -4,11 +4,14 @@
     "description": "FB Messenger Bot",
     "main": "index.js",
     "author": "rguleria",
-    "license": "ISC",
     "dependencies": {
         "body-parser": "^1.17.2",
         "config": "^1.26.1",
         "express": "^4.15.3",
-        "mongoose": "^4.11.4"
-    }
+        "mongoose": "^4.11.4",
+        "morgan": "^1.8.2",
+        "path": "^0.12.7",
+        "request": "^2.81.0"
+    },
+    "private": true
 }
