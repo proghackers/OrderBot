@@ -103,7 +103,7 @@ function receivedPostback(event) {
 
     console.log("Received postback for user %d and page %d with payload '%s' " + "at %d", senderID, recipientID, payload, timeOfPostback);
     if (payload === PAYLOAD_SHOW_MENU) {
-        showMenu(recipientID);
+        showMenu(senderID);
     }
 
     // When a postback is called, we'll send a message back to the sender to
@@ -351,26 +351,26 @@ function showMenu(recipientId) {
                         }]
                     }, {
                         title: "Chicken Biryani",
-                        image_url: SERVER_URL + "/assets/burger.jpg",
-                        subtitle: "Delicious Yet Healthy Still Tasty",
+                        image_url: SERVER_URL + "/assets/chicken_biryani.jpg",
+                        subtitle: "Super Awesome Chicken Biryani with all the spices you need in your life",
                         buttons: [{
                             type: "postback",
                             title: "Add to cart",
                             payload: "ORDER chicken_biryani restaurant1",
                         }]
                     }, {
-                        title: "Classic Burger",
-                        image_url: SERVER_URL + "/assets/burger.jpg",
-                        subtitle: "Delicious Yet Healthy Still Tasty",
+                        title: "Grilled Chicken (with skin)",
+                        image_url: SERVER_URL + "/assets/grilled_chicken.jpg",
+                        subtitle: "OMG This is fucking grilled chicken",
                         buttons: [{
                             type: "postback",
                             title: "Add to cart",
                             payload: "ORDER classic_burger restaurant1",
                         }]
                     }, {
-                        title: "Classic Burger",
-                        image_url: SERVER_URL + "/assets/burger.jpg",
-                        subtitle: "Delicious Yet Healthy Still Tasty",
+                        title: "Rasmalai",
+                        image_url: SERVER_URL + "/assets/rasmalai.jpg",
+                        subtitle: "Rasmalaiiiiii",
                         buttons: [{
                             type: "postback",
                             title: "Add to cart",

@@ -18,7 +18,7 @@ var restaurantSchema = new mongoose.Schema({
         default: Date.now,
         required: true
     },
-    menu: [{ type: Schema.Types.ObjectId, ref: 'FoodItem' }]
+    menu: [{ type: mongoose.Schema.Types.ObjectId, ref: 'FoodItem' }]
 });
 
 module.exports = mongoose.model('Restaurant', restaurantSchema);

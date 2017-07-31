@@ -3,12 +3,14 @@ var express = require('express');
 
 var router = express.Router();
 
-// ==============================================================
 router.route('/')
-    .post(function(req, res) {})
-    .get(function(req, res) {});
-
-router.route('/:geodata_id')
-    .get(function(req, res) {});
-
+    .get(function(req, res) {
+        FoodItem.find({}, function(err, foodItems) {
+            if (err) {
+                res.send(err);
+            } else {
+                res.json(foodItems);
+            }
+        });
+    });
 module.exports = router;

@@ -3,14 +3,15 @@ var mongoose = require('mongoose');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var path = require('path');
+var config = require('config');
 var app = express();
 
 // ================ DB CONFIG ================
-// var dbConfig = require('./config/database.js');
-// mongoose.connect(dbConfig.url);
+mongoose.connect(config.databaseURL);
 
 // ================ ROUTES ================
 var messengerRoute = require('./app/routes/messenger.js');
+var foodItemRoute = require('./app/routes/fooditem');
 
 
 // ================ EXPRESS SETUP ================
@@ -30,6 +31,7 @@ var myLogger = function(req, res, next) {
 app.use(myLogger);
 
 // ================ DEFINE ROUTES ================
+app.use('/fooditem', foodItemRoute);
 app.use('/', messengerRoute);
 
 //START THE SERVER

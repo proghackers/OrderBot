@@ -22,10 +22,10 @@ var foodItemSchema = new mongoose.Schema({
         required: true
     },
     restaurant: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Restaurant'
     },
-    ingredients: [{ type: Schema.Types.ObjectId, ref: 'Ingredient' }]
+    ingredients: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }]
 });
 
 module.exports = mongoose.model('FoodItem', foodItemSchema);
